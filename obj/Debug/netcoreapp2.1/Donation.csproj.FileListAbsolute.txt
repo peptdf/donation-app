@@ -1,0 +1,14 @@
+C:\Users\thiago.simao\source\repos\Donation\Donation\bin\Debug\netcoreapp2.1\Donation.deps.json
+C:\Users\thiago.simao\source\repos\Donation\Donation\bin\Debug\netcoreapp2.1\Donation.runtimeconfig.json
+C:\Users\thiago.simao\source\repos\Donation\Donation\bin\Debug\netcoreapp2.1\Donation.runtimeconfig.dev.json
+C:\Users\thiago.simao\source\repos\Donation\Donation\bin\Debug\netcoreapp2.1\Donation.dll
+C:\Users\thiago.simao\source\repos\Donation\Donation\bin\Debug\netcoreapp2.1\Donation.pdb
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.csproj.CoreCompileInputs.cache
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.RazorAssemblyInfo.cache
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.RazorAssemblyInfo.cs
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.AssemblyInfoInputs.cache
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.AssemblyInfo.cs
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.RazorTargetAssemblyInfo.cache
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.dll
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.pdb
+C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.csprojAssemblyReference.cache
