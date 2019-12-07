@@ -1,5 +1,6 @@
 ﻿using Midleware.Domain.Model;
 using Midleware.Domain.Repository;
+using Midleware.Infra.Database;
 using System;
 using System.Collections.Generic;
 
@@ -14,7 +15,13 @@ namespace Donation.Infra.Repository
 
         public IEnumerable<Participant> Getall()
         {
-            throw new NotImplementedException();
+            var Params = new Dapper.DynamicParameters();
+
+            Params.Add("@StatementType", "SELECT");
+
+            using (var db = new DbManager()) {
+                return db.ExecuteProcedure<Participant>("dbo.jp_ParticipantAction", Params);
+            }
         }
 
         public Participant GetById(int id)

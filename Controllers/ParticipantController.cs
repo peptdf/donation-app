@@ -7,23 +7,23 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Donation.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/participant")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ParticipantController : ControllerBase
     {
 
-        private readonly IDonationService _DonationService;
+        private readonly IParticipantService _ParticipantService;
 
-        public ValuesController(IDonationService _donationService)
+        public ParticipantController(IParticipantService _participantService)
         {
-            _DonationService = _donationService;
+            _ParticipantService = _participantService;
         }
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<Midleware.Domain.Model.Donation>> Get()
+        public ActionResult<IEnumerable<Midleware.Domain.Model.Participant>> Get()
         {
-            return Ok(_DonationService.Getall());
+            return Ok(_ParticipantService.Getall());
         }
 
         // GET api/values/5

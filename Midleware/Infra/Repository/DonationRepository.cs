@@ -1,5 +1,4 @@
-﻿using Midleware.Domain.Model;
-using Midleware.Domain.Repository;
+﻿using Midleware.Domain.Repository;
 using System;
 using System.Collections.Generic;
 
