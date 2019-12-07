@@ -1,19 +1,13 @@
-﻿using Midleware.Donation.Domain.Repository;
+﻿using Midleware.Domain.Model;
+using Midleware.Domain.Repository;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Midleware.Donation.Infra.Repository
 {
-    public class DonationRepository : IRepositoryBase<Midleware.Donation.Domain.Model.Donation>, IDonationRepository
+    public class DonationRepository : IDonationRepository
     {
-        public void add(Midleware.Donation.Domain.Model.Donation obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
+        public void add(Domain.Model.Donation obj)
         {
             throw new NotImplementedException();
         }
@@ -23,12 +17,12 @@ namespace Midleware.Donation.Infra.Repository
             throw new NotImplementedException();
         }
 
-        public Domain.Model.Donation GetById(string id)
+        public Domain.Model.Donation GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(Domain.Model.Donation obj)
+        public void Remove(int id)
         {
             throw new NotImplementedException();
         }

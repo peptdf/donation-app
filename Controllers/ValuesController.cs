@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Midleware.Donation.Domain.Service.Contracts;
+using Midleware.Domain.Service.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Donation.Controllers
@@ -21,9 +21,9 @@ namespace Donation.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Midleware.Domain.Model.Donation>> Get()
         {
-            return _DonationService.getValues();
+            return Ok(_DonationService.Getall());
         }
 
         // GET api/values/5

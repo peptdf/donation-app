@@ -1,59 +1,60 @@
-﻿using System;
+﻿using Dapper;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 
-namespace Donation.Midleware.Infra.Database
+namespace Midleware.Infra.Database
 {
     public class DbManager : IDisposable
     {
-        private readonly Configuration _DbConfiguration;
-        private readonly SqlCommand _SqlCommand;
         private readonly SqlConnection _Connetion;
 
-        public DbManager()
+        /// <param name="memory">verifica se a connection string é usada para o banco do parceiro </param>
+        public DbManager(bool memory = false)
         {
-            _DbConfiguration = new Configuration();
-            _Connetion = new SqlConnection(_DbConfiguration.getDatabase());
-            _SqlCommand = new SqlCommand();
+            _Connetion = new SqlConnection(!memory ? new Configuration().getDatabase() : new Configuration().getDatabase());
         }
 
-        public SqlDataReader ExecuteProcedure(string NomeProcedure)
+        public IEnumerable<T> ExecuteProcedure<T>(string NomeProcedure, DynamicParameters param = null)
         {
             _Connetion.Open();
 
-            _SqlCommand.CommandText = NomeProcedure;
-            _SqlCommand.CommandType = CommandType.StoredProcedure;
-            _SqlCommand.Connection = _Connetion;
-
-            return _SqlCommand.ExecuteReader();
+            if (param != null)
+                return _Connetion.Query<T>(NomeProcedure, param, commandType: CommandType.StoredProcedure, commandTimeout: 0).ToList();
+            else
+                return _Connetion.Query<T>(NomeProcedure, commandType: CommandType.StoredProcedure, commandTimeout: 0).ToList();
         }
 
-
-        public bool ExecuteNonQuery(string NomeProcedure)
+        public bool ExecuteProcedure(string NomeProcedure, DynamicParameters param = null)
         {
             _Connetion.Open();
 
-            _SqlCommand.CommandText = NomeProcedure;
-            _SqlCommand.CommandType = CommandType.StoredProcedure;
-            _SqlCommand.Connection = _Connetion;
+            if (param != null)
+                _Connetion.Query(NomeProcedure, param, commandType: CommandType.StoredProcedure, commandTimeout: 0);
+            else
+                _Connetion.Query(NomeProcedure, commandType: CommandType.StoredProcedure, commandTimeout: 0);
 
-            return _SqlCommand.ExecuteNonQuery() > 0;
+            return true;
         }
 
-        public void AddParams(string key, string Value, SqlDbType Type)
+        public bool ExecuteCommand(string NameCommand)
         {
-            _SqlCommand.Parameters.Add(new SqlParameter(key, Type)).Value = Value;
+            _Connetion.Open();
+
+            _Connetion.Execute(NameCommand);
+
+            return true;
         }
 
         public void Dispose()
         {
-            if (_Connetion != null && _Connetion.State == ConnectionState.Open)
+            if (_Connetion != null && _Connetion.State != ConnectionState.Closed)
             {
                 _Connetion.Close();
                 _Connetion.Dispose();
             }
-
-            GC.SuppressFinalize(this);
         }
     }
 }

@@ -1,15 +1,15 @@
-﻿using Midleware.Donation.Domain.Model;
-using Midleware.Donation.Domain.Repository;
+﻿using Midleware.Domain.Model;
+using Midleware.Domain.Repository;
 using System;
 using System.Collections.Generic;
 
 namespace Donation.Infra.Repository
 {
-    public class ParticipantRepository : IRepositoryBase<Participant>, IParticipantRepository
+    public class ParticipantRepository : IParticipantRepository
     {
         public void add(Participant obj)
         {
-           throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Participant> Getall()
@@ -17,12 +17,12 @@ namespace Donation.Infra.Repository
             throw new NotImplementedException();
         }
 
-        public Participant GetById(string id)
+        public Participant GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(Participant obj)
+        public void Remove(int id)
         {
             throw new NotImplementedException();
         }

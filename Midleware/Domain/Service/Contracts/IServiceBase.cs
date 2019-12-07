@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Midleware.Domain.Repository
+namespace Midleware.Domain.Service.Contracts
 {
-    public interface IRepositoryBase<T> where T : class
+    public interface IServiceBase<T> where T : class
     {
         void add(T obj);
 

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Midleware.Donation.Domain.Repository;
-using Midleware.Donation.Domain.Service;
-using Midleware.Donation.Domain.Service.Contracts;
+using Midleware.Domain.Repository;
+using Midleware.Domain.Service;
+using Midleware.Domain.Service.Contracts;
 using Donation.Infra.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
