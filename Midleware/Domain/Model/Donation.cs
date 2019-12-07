@@ -7,6 +7,7 @@ namespace Midleware.Domain.Model
 {
     public class Donation
     {
+        public int DonationId { get; set; }
         public string DonationType { get; set; }
         public string ParticipantDonorId { get; set; }
         public string ParticipantBeneficiaryId { get; set; }

@@ -12,3 +12,11 @@ C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Don
 C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.dll
 C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.pdb
 C:\Users\thiago.simao\source\repos\Donation\Donation\obj\Debug\netcoreapp2.1\Donation.csprojAssemblyReference.cache
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.csprojAssemblyReference.cache
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.csproj.CoreCompileInputs.cache
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.RazorAssemblyInfo.cache
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.RazorAssemblyInfo.cs
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.AssemblyInfoInputs.cache
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.AssemblyInfo.cs
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.dll
+S:\source\repos\dipsy\donation-app\obj\Debug\netcoreapp2.1\Donation.pdb
